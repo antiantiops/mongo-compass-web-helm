@@ -9,6 +9,11 @@ permissions:
   contents: write
   pull-requests: write
 
+# Serialize workflow runs to prevent concurrent updates
+concurrency:
+  group: update-image
+  cancel-in-progress: false
+
 jobs:
   update-image:
     runs-on: ubuntu-latest
@@ -18,17 +23,31 @@ jobs:
 
       - name: Install yq
         run: |
-          sudo wget -qO /usr/bin/yq https://github.com/mikefarah/yq/releases/latest/download/yq_linux_amd64
+          YQ_VERSION=v4.40.5
+          YQ_SHA=729a5f58f461a38d1f197e8c9e4697f258204a93c9c90efb357c364b7c13d476
+          wget -q https://github.com/mikefarah/yq/releases/download/${YQ_VERSION}/yq_linux_amd64
+          echo "${YQ_SHA}  yq_linux_amd64" | sha256sum -c
+          sudo mv yq_linux_amd64 /usr/bin/yq
           sudo chmod +x /usr/bin/yq
 
       - name: Detect latest image
         id: image
         run: |
+          set -euo pipefail
           CURRENT=$(yq '.appVersion' mongo-compass/Chart.yaml)
-          LATEST=$(curl -s 'https://hub.docker.com/v2/repositories/haohanyang/compass-web/tags?page_size=50' \
+          
+          # Fetch all tags, filter semver, sort and get max
+          LATEST=$(curl --fail -s 'https://hub.docker.com/v2/repositories/haohanyang/compass-web/tags?page_size=100' \
             | jq -r '.results[].name' \
             | grep -E '^[0-9]+\.[0-9]+\.[0-9]+$' \
-            | head -1)
+            | sort -V | tail -1)
+          
+          # Validate tag format
+          if [[ ! "$LATEST" =~ ^[0-9]+\.[0-9]+\.[0-9]+$ ]]; then
+            echo "Invalid or empty tag: $LATEST"
+            exit 1
+          fi
+          
           echo "current=$CURRENT" >> $GITHUB_OUTPUT
           echo "latest=$LATEST" >> $GITHUB_OUTPUT
           if [ "$CURRENT" = "$LATEST" ]; then
