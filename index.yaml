@@ -2,8 +2,30 @@ apiVersion: v1
 entries:
   mongo-compass:
   - apiVersion: v2
+    appVersion: 0.5.2
+    created: "2026-11-03T14:30:13.402845363Z"
+    description: A Helm chart for Kubernetes
+    digest: b59385624677d3050d9cae0bca2ad88b4ac4ba84334bd2d906e804428b304683
+    home: https://nimtechnology.com/
+    icon: https://raw.githubusercontent.com/underndog/mongo-compass-web-helm/master/docs/img/mongo-compass.png
+    keywords:
+    - mongo ui
+    - mongo compass
+    - mongo-ui
+    - mongo-compass
+    maintainers:
+    - email: dc.nim94@gmail.com
+      name: Nim
+    name: mongo-compass
+    sources:
+    - https://github.com/underndog/mongo-compass-web-helm
+    type: application
+    urls:
+    - https://antiantiops.github.io/mongo-compass-web-helm/mongo-compass-1.1.5.tgz
+    version: 1.1.5
+  - apiVersion: v2
     appVersion: 0.5.1
-    created: "2026-08-29T13:30:10.538962362Z"
+    created: "2026-11-03T14:30:13.402554704Z"
     description: A Helm chart for Kubernetes
     digest: 5256fbf92acf70185a4d817c33bdf62b204997687edbde668d40cdff87550d96
     home: https://nimtechnology.com/
@@ -25,7 +47,7 @@ entries:
     version: 1.1.4
   - apiVersion: v2
     appVersion: 0.5.0
-    created: "2026-08-29T13:30:10.538506951Z"
+    created: "2026-11-03T14:30:13.402253565Z"
     description: A Helm chart for Kubernetes
     digest: 8a1568c924aaa1bf6ed5bef2b3f1d23499d14a5d0363f0dba062ad50ba68716a
     home: https://nimtechnology.com/
@@ -47,7 +69,7 @@ entries:
     version: 1.1.3
   - apiVersion: v2
     appVersion: 0.4.2
-    created: "2026-08-29T13:30:10.538060327Z"
+    created: "2026-11-03T14:30:13.401956725Z"
     description: A Helm chart for Kubernetes
     digest: f05733c84c81bd35a43fc098f0eb10f5557be92ef31049bf7d039d13ecb5a18a
     home: https://nimtechnology.com/
@@ -69,7 +91,7 @@ entries:
     version: 1.1.2
   - apiVersion: v2
     appVersion: 0.2.6
-    created: "2026-08-29T13:30:10.537603735Z"
+    created: "2026-11-03T14:30:13.401669638Z"
     description: A Helm chart for Kubernetes
     digest: 93431136310c7be5ca209f96e422b510cef9d0f69b93ebd20ea0e7f6b4fcdfbc
     home: https://nimtechnology.com/
@@ -91,7 +113,7 @@ entries:
     version: 1.1.1
   - apiVersion: v2
     appVersion: 0.2.7
-    created: "2026-08-29T13:30:10.537137744Z"
+    created: "2026-11-03T14:30:13.40136477Z"
     description: A Helm chart for Kubernetes
     digest: 48208c54660c912d2476d3aad75b5f08402c74dad7f4850b32f0d5b7a8c423a8
     home: https://nimtechnology.com/
@@ -113,7 +135,7 @@ entries:
     version: 1.1.0
   - apiVersion: v2
     appVersion: 0.2.7
-    created: "2026-08-29T13:30:10.53627336Z"
+    created: "2026-11-03T14:30:13.401080888Z"
     description: A Helm chart for Kubernetes
     digest: 28bee41c10e52a71e135cb1c0ea1fc8ecbddd270acbeb2e4c662ff2cf891b945
     home: https://nimtechnology.com/
@@ -135,7 +157,7 @@ entries:
     version: 1.0.0
   - apiVersion: v2
     appVersion: 0.2.4
-    created: "2026-08-29T13:30:10.535386234Z"
+    created: "2026-11-03T14:30:13.400784151Z"
     description: A Helm chart for Kubernetes
     digest: 3a689076e4824a2ccf7ac6a2b99ea37a4e1e741203117b21f86545d7fdbe9d06
     home: https://nimtechnology.com/
@@ -157,7 +179,7 @@ entries:
     version: 0.3.0
   - apiVersion: v2
     appVersion: 0.1.2
-    created: "2026-08-29T13:30:10.534959046Z"
+    created: "2026-11-03T14:30:13.400501702Z"
     description: A Helm chart for Kubernetes
     digest: 45eaf5442117eb568db4e0d1e139a95187c7d41450d4e83a35e7ac75ce63929d
     home: https://nimtechnology.com/
@@ -179,7 +201,7 @@ entries:
     version: 0.2.1
   - apiVersion: v2
     appVersion: 0.1.2
-    created: "2026-08-29T13:30:10.534504607Z"
+    created: "2026-11-03T14:30:13.400199309Z"
     description: A Helm chart for Kubernetes
     digest: d1da51d8071ebbd6548f7bb414a481c1d2148e850d37de999a01ddca431b0613
     home: https://nimtechnology.com/
@@ -201,7 +223,7 @@ entries:
     version: 0.2.0
   - apiVersion: v2
     appVersion: 0.1.2
-    created: "2026-08-29T13:30:10.534058364Z"
+    created: "2026-11-03T14:30:13.399854429Z"
     description: A Helm chart for Kubernetes
     digest: 404ee3ff1887afcb79d8acaea149e82ec16bbf8d0b071d247ed9df573a6dd5c1
     home: https://nimtechnology.com/
@@ -223,7 +245,7 @@ entries:
     version: 0.1.2
   - apiVersion: v2
     appVersion: 0.1.1
-    created: "2026-08-29T13:30:10.533593586Z"
+    created: "2026-11-03T14:30:13.399530471Z"
     description: A Helm chart for Kubernetes
     digest: 357601d65d91641ea184960b6c63363f22ceb36c36c6aace933ef355a35a3757
     name: mongo-compass
@@ -233,7 +255,7 @@ entries:
     version: 0.1.1
   - apiVersion: v2
     appVersion: 0.1.1
-    created: "2026-08-29T13:30:10.533209629Z"
+    created: "2026-11-03T14:30:13.399224173Z"
     description: A Helm chart for Kubernetes
     digest: e89171a17d8d71a04cf10ff5cb76897d1eab83caa4e68a632dcd530dbbc46789
     name: mongo-compass
@@ -241,4 +263,4 @@ entries:
     urls:
     - https://antiantiops.github.io/mongo-compass-web-helm/mongo-compass-0.1.0.tgz
     version: 0.1.0
-generated: "2026-08-29T13:30:10.532646157Z"
+generated: "2026-11-03T14:30:13.398756024Z"
